@@ -287,8 +287,7 @@ class SmartConnect(object):
             if params[k] is None :
                 del(params[k])
         
-        orderResponse= self._postRequest("api.order.place", params)['data']['orderid']
-    
+        orderResponse= self._postRequest("api.order.place", params)
         return orderResponse
     
     def modifyOrder(self,orderparams):
